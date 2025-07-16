@@ -11,18 +11,16 @@ import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
 @Setter
+@Getter
 @Entity
-@Table(name = "state")
-public class State {
+@Table(name = "country")
+public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     private String name;
 
-
-    @OneToMany(mappedBy = "state", cascade = CascadeType.ALL)
-    private List<District> districts;
+    @OneToMany(mappedBy = "country", cascade = CascadeType.ALL)
+    private List<State> states;
 }
-
