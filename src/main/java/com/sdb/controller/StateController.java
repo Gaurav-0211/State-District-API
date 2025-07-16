@@ -3,9 +3,7 @@ package com.sdb.controller;
 import com.sdb.dto.StateDto;
 import com.sdb.service.StateService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,10 +18,10 @@ public class StateController {
     }
 
     @PostMapping
-    public ResponseEntity<StateDto> create(StateDto stateDto){
+    public ResponseEntity<StateDto> create(@RequestBody StateDto stateDto){
         return ResponseEntity.ok(stateService.createState(stateDto));
     }
-
+    @GetMapping
     public List<StateDto> getAll(){
         return stateService.getAllState();
     }
