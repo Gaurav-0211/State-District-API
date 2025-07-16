@@ -22,7 +22,8 @@ public class State {
     private String name;
 
 
-    @OneToMany(mappedBy = "state", cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "state_id")
     private List<District> districts;
 }
 

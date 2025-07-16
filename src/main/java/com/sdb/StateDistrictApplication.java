@@ -9,5 +9,4 @@ public class StateDistrictApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(StateDistrictApplication.class, args);
 	}
-
 }

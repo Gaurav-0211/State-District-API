@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -13,5 +15,5 @@ import lombok.Setter;
 public class StateDto {
     private Long id;
     private String name;
-    private Long countryId;
+    private List<DistrictDto> districts;
 }
